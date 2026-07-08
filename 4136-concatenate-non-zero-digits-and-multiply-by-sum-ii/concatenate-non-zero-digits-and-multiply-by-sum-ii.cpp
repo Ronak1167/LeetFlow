@@ -45,11 +45,7 @@ public:
 
             int len = R - L + 1;
 
-            long long x =
-                (prefNum[R + 1] - prefNum[L] * pow10[len]) % MOD;
-
-            if (x < 0)
-                x += MOD;
+            long long x =(prefNum[R + 1] - prefNum[L] * pow10[len] % MOD + MOD) % MOD;
 
             long long sum = prefSum[R + 1] - prefSum[L];
 
